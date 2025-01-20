@@ -3,36 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
     <style>
         body{
             margin: 0;
             padding:0;
             box-sizing: border-box;
-            width: 100vw;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-          overflow: hidden;
+          }
+        a{
+            text-decoration: none;
+            color:#fff;
         }
         #app-wrapper,#app{
-            width: 100%;
+           
+            
         }
         #app{
             position: relative;
+            
         }
         #header{
-            width: 100%;
             height: 70px;
             background: #000;
             z-index: 10;
             display: flex;
             justify-content: space-between;
             align-items: center;
-         
-            padding-right:50px;
+            position: fixed;
+            width: 100%;
+            top:0;
+        }
+         #header div{
+         padding-left:50px;
         }
         #header div img{
            width: 100px;
-           padding-left:50px;
+          
         }
         #header ul{
            display: flex;
@@ -52,8 +60,8 @@
             background:green;
             position: absolute;
             top:0;
-             z-index: -1;
-             background:url('assets/images/banner.png') ;
+            z-index: -1;
+            background:url('assets/images/banner.png');
         }
         #overlay{
            width: 100%;
@@ -68,7 +76,6 @@
             font-size: 100px;
             color:#fff;
             margin-top: 25vh;
-            margin-left: 60px;
             text-align: center;
             width: 60vw;
             font-size: 150px;
@@ -83,15 +90,20 @@
             animation: green 2s infinite;
         }
         @keyframes green{
-            from{
+            0%{
               width: 250px;
             height: 250px;
             rotate: 0deg;
             }
-            to{
+            50%{
             width: 200px;
             height: 200px;
             rotate: 45deg;
+            }
+              100%{
+             width: 250px;
+            height: 250px;
+            rotate: 0deg;
             }
         }
         #yellow{
@@ -104,18 +116,23 @@
             position: absolute;
             right:25vw;
             top:47vh;
-            animation: green 2s infinite;
+            animation: yellow 2s infinite;
         }
         @keyframes yellow{
-            from{
+            0%{
               width: 250px;
             height: 250px;
             rotate: 0deg;
             }
-            to{
+            50%{
             width: 200px;
             height: 200px;
             rotate: 45deg;
+            }
+             100%{
+              width: 250px;
+            height: 250px;
+            rotate: 0deg;
             }
         }
         #blue{
@@ -131,19 +148,22 @@
               animation: blue 2s infinite;
         }
         @keyframes blue{
-            from{
+            0%{
               width: 250px;
             height: 250px;
             rotate: 0deg;
-             background:url('assets/images/blue.png') ;
-             
             }
-            to{
+            50%{
             width: 350px;
             height: 350px;
             rotate: -45deg;
              right:10vw;
             top:30vh;
+            }
+            100%{
+            width: 250px;
+            height: 250px;
+            rotate: 0deg;
             }
         }
         #red{
@@ -154,24 +174,140 @@
             background-repeat: no-repeat;
             background-size: contain;
             position: absolute;
-              right:1vw;
+            right:1vw;
             top:70vh;
             animation: red 2s infinite;
         }
         @keyframes red{
-            from{
+            0%{
             right:1vw;
             }
-            to{
+            50%{
             right:10vw;
             }
+             100%{
+            right:1vw;
+            }
         }
+
+        #show-app{
+            position: absolute;
+            bottom: 30px;
+            left:50%;
+            height: 40px;
+            cursor: pointer;
+        
+        }
+        #show-app i {
+            color:#fff;
+            font-size: 50px;
+            font-weight: 100;
+            cursor: pointer;
+            transform: translate(-50%);
+        }
+        #banner-pusher{
+             height: 100vh;
+        }
+         #hero{
+        background: #ffc900;
+        padding:50px;
+        position: relative;
+        } 
+        #section-heading{
+            
+        }
+        #section-heading h2{
+           font-size: 100px;
+        }
+        #section-heading p{
+           font-size:25px;
+        }
+        #hero-image-pan1{
+            position: absolute;
+            width: 300px;
+            height: 450px;
+            /* background: red; */
+            right:200px;
+            top:50px;
+            rotate:50deg;
+            background-image: url('assets/images/branding1 (4).jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #hero-image-pan1:hover{
+                  width: 310px;
+            height: 460px;
+        }
+         #hero-image-pan2{
+            position: absolute;
+            width: 300px;
+            height: 450px;
+            background: yellow;
+            right:500px;
+            top:50px;
+            rotate:-50deg;
+             background-image: url('assets/images/branding1 (2).jpg');
+            background-size: cover;
+            background-position: left;
+            background-repeat: no-repeat;
+        }
+         #hero-image-pan2:hover{
+              width: 310px;
+            height: 460px;
+        }
+        #our-service{
+             padding:50px;
+        }
+        #service-lister{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+          #service-lister  .service{
+            width: 48.5%;
+            flex-shrink: 0;
+            margin-top: 30px;
+            background: #00af01;
+            color:#303030;
+            border-radius: 10px;
+        }
+        .service{
+             display: flex;
+             width: 100%;
+             border:1px solid  #00af01;
+        }
+        .service .service-icon{
+            width: 30%;
+            height: 100%;
+            background-image: url('assets/images/logo-brand.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px 0px 0px 10px;
+        }
+        .service div:last-child{
+            width: 70%;
+            padding-left:10px;
+            padding: 2%;
+        }
+ .service div:last-child h3{
+           color:#ffc900;
+           font-size: 25px;
+        }
+   .service div:last-child p{
+           color:#fff;
+        }
+    .service div:last-child span{
+           color:#fff;
+        }       
+        
     </style>
 </head>
 <body>
     <div id="app-wrapper">
         <div id="app">
-            <div id="header">
+            <section id="header">
                  <div>
                     <img src="assets/images/logo.png">
                  </div>
@@ -179,8 +315,9 @@
                     <li><a href="mail:official.ojingirisamuel@gmail.com">official.ojingirisamuel@gmail.com</a></li>
                     <li><a href="tel:+2348030914844">+234 803 091 4844</a></li>
                  </ul> 
-            </div>
-            <div id="banner">
+            </section>
+            <div id="banner-pusher"></div>
+            <section id="banner">
                 <div id="overlay"></div>
                  <h1>
                     Every Business
@@ -191,8 +328,113 @@
                 <div id="yellow"></div>
                 <div id="blue"></div>
                 <div id="red"></div>
-            </div>
+                <div id="show-app"><i class="fa fa-angle-down"></i></div>
+            </section>
+            <section id="hero">
+                <div id="section-heading">
+                    <h2>Transforming Ideas <br>into Unique Brands.</h2>
+                    <p>We help businesses grow through innovative design and strategic branding.</p>
+                </div>
+                <div id="hero-image-pan1">
+
+                </div>
+                <div id="hero-image-pan2">
+                
+                </div>
+            </section>
+            <section id="our-service">
+                <div id="section-heading">
+                    <h2>Creative Services That Transform Your Vision Into Reality</h2>
+                    <p>Discover our range of services designed to help your business stand out and thrive in a competitive market.</p>
+                </div>
+                <div id="service-lister">
+                    <div class="service">
+                       <div class="service-icon" data="assets/images/logo-brand.png"></div>
+                       <div>
+                            <h3>Logo Design</h3>
+                            <p>Crafting memorable logos that define your brand</p>
+                            <span>Your logo is the face of your business, and we ensure it’s unforgettable. Our designs are unique, professional,
+                                and
+                                aligned with your brand’s values to leave a lasting impression.</span>
+                       </div>
+                    </div>
+                     <div class="service">
+                        <div class="service-icon" data="assets/images/10818.jpg"></div>
+                        <div>
+                            <h3>Brand Identity</h3>
+                            <p>Building a cohesive and powerful brand story.</p>
+                            <span>From colors and typography to voice and tone, we create a complete branding system that resonates with your target
+                            audience and positions you as a leader in your industry.</span>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon" data="assets/images/web-design.jpg"></div>
+                        <div>
+                            <h3>Web Design</h3>
+                            <p>Engaging websites that drive results.</p>
+                            <span>We design and develop modern, responsive websites that not only look stunning but also provide seamless user
+                            experiences. Our sites are optimized for performance, usability, and search engines.</span>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon" data="assets/images/marketing.jpg"></div>
+                        <div>
+                            <h3>Marketing Collateral</h3>
+                            <p>Professional materials that boost your outreach.</p>
+                            <span>Enhance your marketing campaigns with well-designed business cards, brochures, flyers, and digital assets. We ensure
+                            your message is delivered with clarity and style.</span>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon" data="assets/images/social-marketing.jpg"></div>
+                        <div>
+                            <h3>Social Media Branding</h3>
+                            <p>Consistent branding across all platforms.</p>
+                            <span>We help you create a visually appealing and cohesive presence on social media, from profile designs to custom graphics
+                            for posts and stories.</span>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div></div>
+                        <div>
+                            <h3>Packaging Design</h3>
+                            <p>Packaging that stands out on the shelves.</p>
+                            <span>We design product packaging that’s not just beautiful but also functional and aligned with your brand’s identity,
+                            helping you attract and retain customers.</span>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div></div>
+                        <div>
+                            <h3>Content Creation & Copywriting</h3>
+                            <p>Words and visuals that connect with your audience.</p>
+                            <span>Whether it’s engaging copy for your website or graphics for your campaigns, we provide content that tells your story
+                            effectively.</span>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div></div>
+                        <div>
+                            <h3>Consultation Services</h3>
+                            <p>Strategic Insights to Shape Your Brand's Future.</p>
+                            <span>Not sure what your brand needs? We’ll analyze your business and recommend strategies to elevate your presence</span>
+                        <div>
+                    </div>
+                    
+                </div>
+            </section>
         </div>
     </div>
+
+    <script>
+       var si =  document.getElementsByClassName('service-icon');
+       for(let i =0 ; i < si.length ; i++){
+        console.log(si[i].getAttribute('data'))
+        si[i].style.backgroundImage = `url('${si[i].getAttribute('data')}')`;
+       }
+       document.getElementById("show-app").onclick = ()=>{
+         document.getElementById("hero").scrollIntoView();
+       }
+    </script>
 </body>
 </html>
