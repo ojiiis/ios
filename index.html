@@ -11,14 +11,14 @@
             padding:0;
             box-sizing: border-box;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           
           }
         a{
             text-decoration: none;
             color:#fff;
         }
         #app-wrapper,#app{
-           
-            
+        
         }
         #app{
             position: relative;
@@ -62,6 +62,7 @@
             top:0;
             z-index: -1;
             background:url('assets/images/banner.png');
+            background-attachment: fixed;
         }
         #overlay{
            width: 100%;
@@ -212,14 +213,15 @@
         background: #ffc900;
         padding:50px;
         position: relative;
+        height:600px ;
         } 
         #section-heading{
             
         }
-        #section-heading h2{
+        .section-heading h2{
            font-size: 100px;
         }
-        #section-heading p{
+        .section-heading p{
            font-size:25px;
         }
         #hero-image-pan1{
@@ -227,9 +229,10 @@
             width: 300px;
             height: 450px;
             /* background: red; */
-            right:200px;
-            top:50px;
-            rotate:50deg;
+            right:300px;
+            top:50%;
+            transform: translate(0,-60%);
+            rotate:30deg;
             background-image: url('assets/images/branding1 (4).jpg');
             background-size: cover;
             background-position: center;
@@ -243,10 +246,11 @@
             position: absolute;
             width: 300px;
             height: 450px;
-            background: yellow;
-            right:500px;
-            top:50px;
-            rotate:-50deg;
+            background: #ffc900;
+            right:300px;
+            top:50%;
+             transform: translate(0,-60%);
+             rotate:-30deg;
              background-image: url('assets/images/branding1 (2).jpg');
             background-size: cover;
             background-position: left;
@@ -256,9 +260,29 @@
               width: 310px;
             height: 460px;
         }
-        #our-service{
+        #our-service,#what-client-are-saying,#contact-us{
              padding:50px;
+             padding-bottom: 100px;
+             position: relative;
+               z-index: 1;
         }
+         #our-service::after,#what-client-are-saying::after,#contact-us::after{
+            content:"";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            top:0;
+            left:0;
+            opacity: 0.4;
+            z-index: -1;
+        }
+         #our-service{
+           background: #00af01;  
+            background-image: url('assets/images/service-filler.png');
+            background-repeat: no-repeat;
+            background-position: top left;
+         }
         #service-lister{
             width: 100%;
             display: flex;
@@ -269,14 +293,14 @@
             width: 48.5%;
             flex-shrink: 0;
             margin-top: 30px;
-            background: #00af01;
+            background: #fff;
             color:#303030;
             border-radius: 10px;
         }
         .service{
              display: flex;
              width: 100%;
-             border:1px solid  #00af01;
+             border:1px solid  #fff;;
         }
         .service .service-icon{
             width: 30%;
@@ -292,16 +316,242 @@
             padding: 2%;
         }
  .service div:last-child h3{
-           color:#ffc900;
+           color:#ff0000;
            font-size: 25px;
         }
    .service div:last-child p{
-           color:#fff;
+          color:#303030;
         }
     .service div:last-child span{
-           color:#fff;
-        }       
-        
+          color:#303030;
+        }     
+        #what-client-are-saying{
+            background: #ff0000;
+            background-image: url('assets/images/ourclient-filler.png');
+            background-repeat: no-repeat;
+            background-position: top center;
+        }  
+
+            #testimony-lister{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            height: auto;
+            overflow-x: auto;
+        }
+          .testimony-single{
+            width: 30%;
+            padding:1%;
+            flex-shrink: 0;
+            background: transparent;
+            color:#303030;
+            border-radius: 10px;
+            position: relative;
+            
+             margin-top: 100px;
+             background: #ffc900;
+             
+        }
+         .testimony-user{
+           position: absolute; 
+           top:-38%;
+           left:30px;
+           width: 100px;
+           height: 100px;
+           background: transparent;
+           border-radius: 50%;
+          border:2px solid #ffc900;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+         }
+         #contact-us{
+            background: url('assets/images/contact-filler.png');
+            background-repeat: no-repeat;
+            background-position: top right;
+         }
+         #contact-us-{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+         }
+          #contact-us-right,#contact-us-left{
+             width: 45%;
+          }
+         #contact-us- a{
+            color:#001eff;
+         }
+          #contact-us-left div{
+             font-size: 35px;
+             margin-bottom: 25px;
+          }
+         #contact-us-right form{
+             width: 80%;
+             height: auto;
+             padding:50px;
+             background: #001eff;
+             border-radius: 10px;
+         }
+          #contact-us-right form input{
+            display: block;
+            width: 100%;
+            outline: 0;
+            border:none;
+            background: transparent;
+            margin-bottom: 20px;
+            color:#fff;
+            font-size: 25px;
+            border-bottom: 1px solid #fff;
+            padding: 10px;
+          }
+          
+          #contact-us-right form textarea{
+            display: block;
+            width: 100%;
+            height: 100px;
+            background: transparent;
+            margin-bottom: 20px;
+            color:#fff;
+            font-size: 25px;
+            border: 1px solid #fff;
+            outline: 0;
+            padding: 10px;
+          }
+          #contact-us-right form input::placeholder,#contact-us-right form textarea::placeholder{
+            color:#fff;
+          }
+          button{
+            padding:10px 50px;
+            background: #fff;
+            color:#000;
+            border:none;
+            outline: 0;
+            border-radius: 10px;
+          }
+        #footer{
+            background:  #00af01;
+            padding:50px;
+            text-align: center;
+        }
+         #footer h6{
+             font-size: 26px;
+             color:#fff;
+         }
+        @media  screen and (max-width:720px){
+            .no-mobile{
+                display: none;
+            }
+           #banner{
+            display: none;
+           }
+           #banner-pusher{
+           height: 70px;
+           }
+            .section-heading h2{
+           font-size: 30px;
+        }
+        .section-heading p{
+           font-size:16px;
+        }
+
+
+
+               #hero{
+        position: relative;
+        padding:50px;
+        height: 500px;
+        } 
+
+        #hero-image-pan1{
+            width: 40%;
+            height: 150px;
+            left:65%;
+            top:auto;
+            bottom:100px;
+            rotate:-50deg;
+        }
+        #hero-image-pan1:hover,#hero-image-pan2:hover{
+                 width: 41%;
+            height: 160px;
+        }
+         #hero-image-pan2{
+            width: 40%;
+            height: 150px;
+            right:65%;
+            top:auto;
+            bottom:100px;
+            rotate:50deg;
+        }
+       
+
+
+ #service-lister  .service{
+            width: 100%;
+        }
+
+        .service{
+              flex-direction: column;
+             width: 100%;
+        }
+        .service .service-icon{
+            width: 100%;
+            height: 200px;
+            border-radius: 10px 10px 0 0;
+        }
+        /* currently working here*/
+        .service div:last-child{
+            width: 100%;
+            padding-left:10px;
+            padding: 2%;
+            text-wrap: wrap;
+            text-align: left;
+        }
+  
+
+  .testimony-single{
+            width: 95%;
+            margin-right: 50px;      
+        }
+  .testimony-single:last-child{
+            margin-right: 0px;      
+        }
+         #testimony-lister{
+         margin-top: 50px;
+        }
+          
+           #our-service,#what-client-are-saying,#contact-us{
+  background-image: none;
+           }
+          #contact-us-{
+         flex-direction: column;
+            justify-content: space-evenly;
+         }
+          #contact-us-right form{
+             width: 70%;
+         }
+          
+         #contact-us-right form input,#contact-us-right form textarea{
+       font-size: 15px;
+          }
+          #contact-us-right,#contact-us-left{
+             width: 100%;
+          }
+           #contact-us-left div{
+             font-size: 20px;
+             margin-bottom: 25px;
+          }
+          #contact-us-right{
+                margin-top: 25px;
+          }
+          .testimony-content h3,.testimony-content p{
+            padding:10px;
+          }
+          .testimony-user{
+            margin-top: 10%;
+          }
+          
+        }
     </style>
 </head>
 <body>
@@ -312,8 +562,8 @@
                     <img src="assets/images/logo.png">
                  </div>
                  <ul>
-                    <li><a href="mail:official.ojingirisamuel@gmail.com">official.ojingirisamuel@gmail.com</a></li>
-                    <li><a href="tel:+2348030914844">+234 803 091 4844</a></li>
+                    <li><a href="mailto:official.ojingirisamuel@gmail.com"><i class="fa fa-envelope"></i> <span class="no-mobile">official.ojingirisamuel@gmail.com</span></a></li>
+                    <li><a href="tel:+2348030914844"><i class="fa fa-phone"></i> <span class="no-mobile">+234 803 091 4844</span></a></li>
                  </ul> 
             </section>
             <div id="banner-pusher"></div>
@@ -331,7 +581,7 @@
                 <div id="show-app"><i class="fa fa-angle-down"></i></div>
             </section>
             <section id="hero">
-                <div id="section-heading">
+                <div class="section-heading">
                     <h2>Transforming Ideas <br>into Unique Brands.</h2>
                     <p>We help businesses grow through innovative design and strategic branding.</p>
                 </div>
@@ -343,8 +593,8 @@
                 </div>
             </section>
             <section id="our-service">
-                <div id="section-heading">
-                    <h2>Creative Services That Transform Your Vision Into Reality</h2>
+                <div class="section-heading">
+                    <h2>Our Creative Services</h2>
                     <p>Discover our range of services designed to help your business stand out and thrive in a competitive market.</p>
                 </div>
                 <div id="service-lister">
@@ -359,7 +609,7 @@
                        </div>
                     </div>
                      <div class="service">
-                        <div class="service-icon" data="assets/images/10818.jpg"></div>
+                        <div class="service-icon" data="assets/images/branding1 (3).jpg"></div>
                         <div>
                             <h3>Brand Identity</h3>
                             <p>Building a cohesive and powerful brand story.</p>
@@ -395,7 +645,7 @@
                         </div>
                     </div>
                     <div class="service">
-                        <div></div>
+                        <div class="service-icon" data="assets/images/10818.jpg"></div>
                         <div>
                             <h3>Packaging Design</h3>
                             <p>Packaging that stands out on the shelves.</p>
@@ -404,7 +654,7 @@
                         </div>
                     </div>
                     <div class="service">
-                        <div></div>
+                        <div class="service-icon" data="assets/images/cw.jpg"></div>
                         <div>
                             <h3>Content Creation & Copywriting</h3>
                             <p>Words and visuals that connect with your audience.</p>
@@ -413,28 +663,97 @@
                         </div>
                     </div>
                     <div class="service">
-                        <div></div>
+                        <div class="service-icon" data="assets/images/cs.jpg"></div>
                         <div>
                             <h3>Consultation Services</h3>
                             <p>Strategic Insights to Shape Your Brand's Future.</p>
                             <span>Not sure what your brand needs? We’ll analyze your business and recommend strategies to elevate your presence</span>
-                        <div>
+                        </div>
                     </div>
                     
                 </div>
+            </section>
+            <section id="what-client-are-saying">
+                <div class="section-heading">
+                    <h2>What Our Clients Are Saying</h2>
+                    <p>Don’t just take our word for it, hear from the businesses we’ve helped transform.</p>
+                </div>
+                <div id="testimony-lister">
+                    <div class="testimony-single">
+                        <div class="testimony-user" data="assets/images/t1.jpeg"></div>
+                        <div class="testimony-content">
+                            <h3>"Working with Ojiiis was a game-changer for our business. They captured the essence of our identity and
+                                transformed it into a visual story that truly resonates with our audience. The results exceeded our
+                                expectations!"</h3>
+                            <p>— Jessica R., CEO, Creative Ventures</p>
+                        </div>
+                    </div>
+                    <div class="testimony-single">
+                        <div class="testimony-user" data="assets/images/t2.jpeg"></div>
+                        <div class="testimony-content">
+                            <h3>"The branding solutions provided by Ojiiis are unparalleled. From strategy to execution, every step was
+                                seamless and professional. Our brand now stands out in a crowded market, and we couldn't be happier."
+                            </h3>
+                            <p>— Michael T., Founder, NextGen Startups</p>
+                        </div>
+                    </div>
+                    <div class="testimony-single">
+                    <div class="testimony-user" data="assets/images/t3.jpeg"></div>
+                        <div class="testimony-content">
+                            <h3>"Ojiiis not only revamped our branding but also gave us the confidence to showcase our business on a
+                                global
+                                stage. Their creativity and attention to detail are unmatched. Highly recommend!"</h3>
+                            <p>— Emily K., Marketing Director, Horizon Group</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact-us">
+                <div class="section-heading">
+                    <h2>Contact us</h2>
+                    <p>Let's talk on something great.</p>
+                </div>
+                <div id="contact-us-">
+                    <div id="contact-us-left">
+                        <div><i class="fa fa-twitter"></i> <a href="https://x.com/ojiiis_ng">x.com/ojiiis_ng</a></div>
+                        <div><i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/company/ojiiis/">linkedin.com/company/ojiiis</a></div>
+                        <div><i class="fa fa-envelope"></i> <a href="mailto:official.ojingirisamuel@gmail.com">official.ojingirisamuel@gmail.com</a> </div>
+                        <div><i class="fa fa-phone"></i> <a href="tel:+2348030914844">+234 803 091 4844</a> </div>
+                    </div>
+                    <div id="contact-us-right">
+
+                         <form>
+                             <input type="text" name="fullname" placeholder="Enter your fullname">
+                             <input type="text" name="contact" placeholder="Enter your contact details">
+                             <textarea name="message" placeholder="Enter your message"></textarea>
+                             <button>Send</button>
+                         </form>
+                    </div>
+                </div>
+            </section>
+            <section id="footer">
+                   <img src="assets/images/logo-white.png">
+                   <h6>Every business deserves a branding.</h6>
+                 
             </section>
         </div>
     </div>
 
     <script>
-       var si =  document.getElementsByClassName('service-icon');
+       var si =  document.getElementsByClassName('service-icon'), tu = document.getElementsByClassName('testimony-user');;
        for(let i =0 ; i < si.length ; i++){
         console.log(si[i].getAttribute('data'))
         si[i].style.backgroundImage = `url('${si[i].getAttribute('data')}')`;
        }
+        for (let i = 0; i < tu.length; i++) {
+                console.log(tu[i].getAttribute('data'))
+                tu[i].style.backgroundImage = `url('${tu[i].getAttribute('data')}')`;
+            }
        document.getElementById("show-app").onclick = ()=>{
          document.getElementById("hero").scrollIntoView();
        }
+
+       
     </script>
 </body>
 </html>
