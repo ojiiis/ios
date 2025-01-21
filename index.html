@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
     <style>
-        body{
+        body {
             margin: 0;
-            padding:0;
+            padding: 0;
             box-sizing: border-box;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-           
-          }
-        a{
+
+        }
+
+        a {
             text-decoration: none;
-            color:#fff;
+            color: #fff;
         }
-        #app-wrapper,#app{
-        
-        }
-        #app{
+
+        #app-wrapper,
+        #app {}
+
+        #app {
             position: relative;
-            
+
         }
-        #header{
+
+        #header {
             height: 70px;
             background: #000;
             z-index: 10;
@@ -33,276 +37,322 @@
             align-items: center;
             position: fixed;
             width: 100%;
-            top:0;
+            top: 0;
         }
-         #header div{
-         padding-left:50px;
+
+        #header div {
+            padding-left: 50px;
         }
-        #header div img{
-           width: 100px;
-          
+
+        #header div img {
+            width: 100px;
+
         }
-        #header ul{
-           display: flex;
-           padding-right:50px;
+
+        #header ul {
+            display: flex;
+            padding-right: 50px;
         }
-         #header ul li{
-           list-style-type: none;
+
+        #header ul li {
+            list-style-type: none;
         }
-        #header ul li a{
-           text-decoration:none ;
-           color:white;
-           margin-left: 20px;
+
+        #header ul li a {
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
         }
-        #banner{
+
+        #banner {
             width: 100%;
             height: 100vh;
-            background:green;
+            background: green;
             position: absolute;
-            top:0;
+            top: 0;
             z-index: -1;
-            background:url('assets/images/banner.png');
+            background: url('assets/images/banner.png');
             background-attachment: fixed;
         }
-        #overlay{
-           width: 100%;
-            height: 100vh;  
-             position: absolute;
-              top:0;
-               background:black;
-               z-index: -3;
-               opacity: .85;
+
+        #overlay {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            background: black;
+            z-index: -3;
+            opacity: .85;
         }
-        #banner h1{
+
+        #banner h1 {
             font-size: 100px;
-            color:#fff;
+            color: #fff;
             margin-top: 25vh;
             text-align: center;
             width: 60vw;
             font-size: 150px;
         }
-        #green{
+
+        #green {
             width: 250px;
             height: 250px;
-            background:url('assets/images/green.png') ;
+            background: url('assets/images/green.png');
             position: absolute;
-            right:17vw;
-            top:17vh;
+            right: 17vw;
+            top: 17vh;
             animation: green 2s infinite;
         }
-        @keyframes green{
-            0%{
-              width: 250px;
-            height: 250px;
-            rotate: 0deg;
+
+        @keyframes green {
+            0% {
+                width: 250px;
+                height: 250px;
+                rotate: 0deg;
             }
-            50%{
-            width: 200px;
-            height: 200px;
-            rotate: 45deg;
+
+            50% {
+                width: 200px;
+                height: 200px;
+                rotate: 45deg;
             }
-              100%{
-             width: 250px;
-            height: 250px;
-            rotate: 0deg;
+
+            100% {
+                width: 250px;
+                height: 250px;
+                rotate: 0deg;
             }
         }
-        #yellow{
+
+        #yellow {
             width: 250px;
             height: 250px;
-            background:url('assets/images/yellow.png') ;
+            background: url('assets/images/yellow.png');
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
             position: absolute;
-            right:25vw;
-            top:47vh;
+            right: 25vw;
+            top: 47vh;
             animation: yellow 2s infinite;
         }
-        @keyframes yellow{
-            0%{
-              width: 250px;
-            height: 250px;
-            rotate: 0deg;
+
+        @keyframes yellow {
+            0% {
+                width: 250px;
+                height: 250px;
+                rotate: 0deg;
             }
-            50%{
-            width: 200px;
-            height: 200px;
-            rotate: 45deg;
+
+            50% {
+                width: 200px;
+                height: 200px;
+                rotate: 45deg;
             }
-             100%{
-              width: 250px;
-            height: 250px;
-            rotate: 0deg;
-            }
-        }
-        #blue{
-            width: 250px;
-            height: 250px;
-            background:url('assets/images/blue.png') ;
-             background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            position: absolute;
-             right:0vw;
-            top:37vh;
-              animation: blue 2s infinite;
-        }
-        @keyframes blue{
-            0%{
-              width: 250px;
-            height: 250px;
-            rotate: 0deg;
-            }
-            50%{
-            width: 350px;
-            height: 350px;
-            rotate: -45deg;
-             right:10vw;
-            top:30vh;
-            }
-            100%{
-            width: 250px;
-            height: 250px;
-            rotate: 0deg;
-            }
-        }
-        #red{
-            width: 500px;
-            height: 250px;
-            background:url('assets/images/red.png') ;
-             background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            position: absolute;
-            right:1vw;
-            top:70vh;
-            animation: red 2s infinite;
-        }
-        @keyframes red{
-            0%{
-            right:1vw;
-            }
-            50%{
-            right:10vw;
-            }
-             100%{
-            right:1vw;
+
+            100% {
+                width: 250px;
+                height: 250px;
+                rotate: 0deg;
             }
         }
 
-        #show-app{
+        #blue {
+            width: 250px;
+            height: 250px;
+            background: url('assets/images/blue.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            right: 0vw;
+            top: 37vh;
+            animation: blue 2s infinite;
+        }
+
+        @keyframes blue {
+            0% {
+                width: 250px;
+                height: 250px;
+                rotate: 0deg;
+            }
+
+            50% {
+                width: 350px;
+                height: 350px;
+                rotate: -45deg;
+                right: 10vw;
+                top: 30vh;
+            }
+
+            100% {
+                width: 250px;
+                height: 250px;
+                rotate: 0deg;
+            }
+        }
+
+        #red {
+            width: 500px;
+            height: 250px;
+            background: url('assets/images/red.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            right: 1vw;
+            top: 70vh;
+            animation: red 2s infinite;
+        }
+
+        @keyframes red {
+            0% {
+                right: 1vw;
+            }
+
+            50% {
+                right: 10vw;
+            }
+
+            100% {
+                right: 1vw;
+            }
+        }
+
+        #show-app {
             position: absolute;
             bottom: 30px;
-            left:50%;
+            left: 50%;
             height: 40px;
             cursor: pointer;
-        
+
         }
+
         #show-app i {
-            color:#fff;
+            color: #fff;
             font-size: 50px;
             font-weight: 100;
             cursor: pointer;
             transform: translate(-50%);
         }
-        #banner-pusher{
-             height: 100vh;
+
+        #banner-pusher {
+            height: 100vh;
         }
-         #hero{
-        background: #ffc900;
-        padding:50px;
-        position: relative;
-        height:600px ;
-        } 
-        #section-heading{
-            
+
+        #hero {
+            background: #ffc900;
+            padding: 50px;
+            position: relative;
+            height: 600px;
         }
-        .section-heading h2{
-           font-size: 100px;
+
+        .section-heading {
+            color: #fff;
         }
-        .section-heading p{
-           font-size:25px;
+
+        .section-heading h2 {
+            font-size: 100px;
         }
-        #hero-image-pan1{
+
+        .section-heading p {
+            font-size: 25px;
+        }
+
+        #hero-image-pan1 {
             position: absolute;
             width: 300px;
             height: 450px;
             /* background: red; */
-            right:300px;
-            top:50%;
-            transform: translate(0,-60%);
-            rotate:30deg;
+            right: 300px;
+            top: 50%;
+            transform: translate(0, -60%);
+            rotate: 30deg;
             background-image: url('assets/images/branding1 (4).jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-        #hero-image-pan1:hover{
-                  width: 310px;
+
+        #hero-image-pan1:hover {
+            width: 310px;
             height: 460px;
         }
-         #hero-image-pan2{
+
+        #hero-image-pan2 {
             position: absolute;
             width: 300px;
             height: 450px;
             background: #ffc900;
-            right:300px;
-            top:50%;
-             transform: translate(0,-60%);
-             rotate:-30deg;
-             background-image: url('assets/images/branding1 (2).jpg');
+            right: 300px;
+            top: 50%;
+            transform: translate(0, -60%);
+            rotate: -30deg;
+            background-image: url('assets/images/branding1 (2).jpg');
             background-size: cover;
             background-position: left;
             background-repeat: no-repeat;
         }
-         #hero-image-pan2:hover{
-              width: 310px;
+
+        #hero-image-pan2:hover {
+            width: 310px;
             height: 460px;
         }
-        #our-service,#what-client-are-saying,#contact-us{
-             padding:50px;
-             padding-bottom: 100px;
-             position: relative;
-               z-index: 1;
+
+        #our-service,
+        #what-client-are-saying,
+        #contact-us {
+            padding: 50px;
+            padding-bottom: 100px;
+            position: relative;
+            z-index: 1;
         }
-         #our-service::after,#what-client-are-saying::after,#contact-us::after{
-            content:"";
+
+        #our-service::after,
+        #what-client-are-saying::after,
+        #contact-us::after {
+            content: "";
             position: absolute;
             width: 100%;
             height: 100%;
-            background: #fff;
-            top:0;
-            left:0;
+            background: #000;
+            top: 0;
+            left: 0;
             opacity: 0.4;
             z-index: -1;
         }
-         #our-service{
-           background: #00af01;  
+
+        #our-service {
+            background: #00af01;
             background-image: url('assets/images/service-filler.png');
             background-repeat: no-repeat;
             background-position: top left;
-         }
-        #service-lister{
+        }
+
+        #service-lister {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-          #service-lister  .service{
+
+        #service-lister .service {
             width: 48.5%;
             flex-shrink: 0;
             margin-top: 30px;
             background: #fff;
-            color:#303030;
+            color: #303030;
             border-radius: 10px;
         }
-        .service{
-             display: flex;
-             width: 100%;
-             border:1px solid  #fff;;
+
+        .service {
+            display: flex;
+            width: 100%;
+            border: 1px solid #fff;
+            ;
         }
-        .service .service-icon{
+
+        .service .service-icon {
             width: 30%;
             height: 100%;
             background-image: url('assets/images/logo-brand.png');
@@ -310,29 +360,33 @@
             background-position: center;
             border-radius: 10px 0px 0px 10px;
         }
-        .service div:last-child{
-            width: 70%;
-            padding-left:10px;
-            padding: 2%;
+
+        .service div:last-child {
+            padding-left: 10px;
+            padding: 10px;
         }
- .service div:last-child h3{
-           color:#ff0000;
-           font-size: 25px;
+
+        .service div:last-child h3 {
+            color: #ff0000;
+            font-size: 25px;
         }
-   .service div:last-child p{
-          color:#303030;
+
+        .service div:last-child p {
+            color: #303030;
         }
-    .service div:last-child span{
-          color:#303030;
-        }     
-        #what-client-are-saying{
+
+        .service div:last-child span {
+            color: #303030;
+        }
+
+        #what-client-are-saying {
             background: #ff0000;
             background-image: url('assets/images/ourclient-filler.png');
             background-repeat: no-repeat;
             background-position: top center;
-        }  
+        }
 
-            #testimony-lister{
+        #testimony-lister {
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -340,241 +394,283 @@
             height: auto;
             overflow-x: auto;
         }
-          .testimony-single{
+
+        .testimony-single {
             width: 30%;
-            padding:1%;
+            padding: 1%;
             flex-shrink: 0;
             background: transparent;
-            color:#303030;
+            color: #303030;
             border-radius: 10px;
             position: relative;
-            
-             margin-top: 100px;
-             background: #ffc900;
-             
+
+            margin-top: 100px;
+            background: #ffc900;
+
         }
-         .testimony-user{
-           position: absolute; 
-           top:-38%;
-           left:30px;
-           width: 100px;
-           height: 100px;
-           background: transparent;
-           border-radius: 50%;
-          border:2px solid #ffc900;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-         }
-         #contact-us{
-            background: url('assets/images/contact-filler.png');
+
+        .testimony-user {
+            position: absolute;
+            top: -38%;
+            left: 30px;
+            width: 100px;
+            height: 100px;
+            background: transparent;
+            border-radius: 50%;
+            border: 2px solid #ffc900;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #contact-us {
+            background: #001eff;
+            background-image: url('assets/images/contact-filler.png');
             background-repeat: no-repeat;
             background-position: top right;
-         }
-         #contact-us-{
+        }
+
+        #contact-us- {
             width: 100%;
             display: flex;
             justify-content: space-evenly;
-         }
-          #contact-us-right,#contact-us-left{
-             width: 45%;
-          }
-         #contact-us- a{
-            color:#001eff;
-         }
-          #contact-us-left div{
-             font-size: 35px;
-             margin-bottom: 25px;
-          }
-         #contact-us-right form{
-             width: 80%;
-             height: auto;
-             padding:50px;
-             background: #001eff;
-             border-radius: 10px;
-         }
-          #contact-us-right form input{
+        }
+
+        #contact-us-right,
+        #contact-us-left {
+            width: 45%;
+        }
+
+        #contact-us- a,
+        #contact-us- i {
+            color: #fff;
+        }
+
+        #contact-us-left div {
+            font-size: 35px;
+            margin-bottom: 25px;
+        }
+
+        #contact-us-right form {
+            width: 80%;
+            height: auto;
+            padding: 50px;
+            background: #001eff;
+            border-radius: 10px;
+        }
+
+        #contact-us-right form input {
             display: block;
             width: 100%;
             outline: 0;
-            border:none;
+            border: none;
             background: transparent;
             margin-bottom: 20px;
-            color:#fff;
+            color: #fff;
             font-size: 25px;
             border-bottom: 1px solid #fff;
             padding: 10px;
-          }
-          
-          #contact-us-right form textarea{
+        }
+
+        #contact-us-right form textarea {
             display: block;
             width: 100%;
             height: 100px;
             background: transparent;
             margin-bottom: 20px;
-            color:#fff;
+            color: #fff;
             font-size: 25px;
             border: 1px solid #fff;
             outline: 0;
             padding: 10px;
-          }
-          #contact-us-right form input::placeholder,#contact-us-right form textarea::placeholder{
-            color:#fff;
-          }
-          button{
-            padding:10px 50px;
+        }
+
+        #contact-us-right form input::placeholder,
+        #contact-us-right form textarea::placeholder {
+            color: #fff;
+        }
+
+        button {
+            padding: 10px 50px;
             background: #fff;
-            color:#000;
-            border:none;
+            color: #000;
+            border: none;
             outline: 0;
             border-radius: 10px;
-          }
-        #footer{
-            background:  #00af01;
-            padding:50px;
+        }
+
+        #footer {
+            padding: 50px;
             text-align: center;
         }
-         #footer h6{
-             font-size: 26px;
-             color:#fff;
-         }
-        @media  screen and (max-width:720px){
-            .no-mobile{
+
+        #footer h6 {
+            font-size: 26px;
+            color: #fff;
+        }
+
+        @media screen and (max-width:720px) {
+            .no-mobile {
                 display: none;
             }
-           #banner{
-            display: none;
-           }
-           #banner-pusher{
-           height: 70px;
-           }
-            .section-heading h2{
-           font-size: 30px;
-        }
-        .section-heading p{
-           font-size:16px;
-        }
+
+            #banner {
+                display: none;
+            }
+
+            #banner-pusher {
+                height: 70px;
+            }
+
+            .section-heading h2 {
+                font-size: 30px;
+            }
+
+            .section-heading p {
+                font-size: 16px;
+            }
 
 
 
-               #hero{
-        position: relative;
-        padding:50px;
-        height: 500px;
-        } 
+            #hero {
+                position: relative;
+                padding: 50px;
+                height: 500px;
+            }
 
-        #hero-image-pan1{
-            width: 40%;
-            height: 150px;
-            left:65%;
-            top:auto;
-            bottom:100px;
-            rotate:-50deg;
-        }
-        #hero-image-pan1:hover,#hero-image-pan2:hover{
-                 width: 41%;
-            height: 160px;
-        }
-         #hero-image-pan2{
-            width: 40%;
-            height: 150px;
-            right:65%;
-            top:auto;
-            bottom:100px;
-            rotate:50deg;
-        }
-       
+            #hero-image-pan1 {
+                width: 40%;
+                height: 150px;
+                left: 65%;
+                top: auto;
+                bottom: 100px;
+                rotate: -50deg;
+            }
+
+            #hero-image-pan1:hover,
+            #hero-image-pan2:hover {
+                width: 41%;
+                height: 160px;
+            }
+
+            #hero-image-pan2 {
+                width: 40%;
+                height: 150px;
+                right: 65%;
+                top: auto;
+                bottom: 100px;
+                rotate: 50deg;
+            }
 
 
- #service-lister  .service{
-            width: 100%;
-        }
 
-        .service{
-              flex-direction: column;
-             width: 100%;
-        }
-        .service .service-icon{
-            width: 100%;
-            height: 200px;
-            border-radius: 10px 10px 0 0;
-        }
-        /* currently working here*/
-        .service div:last-child{
-            width: 100%;
-            padding-left:10px;
-            padding: 2%;
-            text-wrap: wrap;
-            text-align: left;
-        }
-  
+            #service-lister .service {
+                width: 100%;
+            }
 
-  .testimony-single{
-            width: 95%;
-            margin-right: 50px;      
-        }
-  .testimony-single:last-child{
-            margin-right: 0px;      
-        }
-         #testimony-lister{
-         margin-top: 50px;
-        }
-          
-           #our-service,#what-client-are-saying,#contact-us{
-  background-image: none;
-           }
-          #contact-us-{
-         flex-direction: column;
-            justify-content: space-evenly;
-         }
-          #contact-us-right form{
-             width: 70%;
-         }
-          
-         #contact-us-right form input,#contact-us-right form textarea{
-       font-size: 15px;
-          }
-          #contact-us-right,#contact-us-left{
-             width: 100%;
-          }
-           #contact-us-left div{
-             font-size: 20px;
-             margin-bottom: 25px;
-          }
-          #contact-us-right{
+            .service {
+                flex-direction: column;
+
+            }
+
+            .service .service-icon {
+                width: 100%;
+                height: 200px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            /* currently working here*/
+            .service div:last-child {
+                margin: 0 auto;
+                padding: 10px;
+                text-wrap: wrap;
+                text-align: left;
+            }
+
+
+            .testimony-single {
+                width: 95%;
+                margin-right: 50px;
+            }
+
+            .testimony-single:last-child {
+                margin-right: 0px;
+            }
+
+            #testimony-lister {
+                margin-top: 50px;
+            }
+
+            #our-service,
+            #what-client-are-saying,
+            #contact-us {
+                /* // background-image: none; */
+            }
+
+            #contact-us- {
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+
+            #contact-us-right form {
+                width: 70%;
+            }
+
+            #contact-us-right form input,
+            #contact-us-right form textarea {
+                font-size: 15px;
+            }
+
+            #contact-us-right,
+            #contact-us-left {
+                width: 100%;
+            }
+
+            #contact-us-left div {
+                font-size: 20px;
+                margin-bottom: 25px;
+            }
+
+            #contact-us-right {
                 margin-top: 25px;
-          }
-          .testimony-content h3,.testimony-content p{
-            padding:10px;
-          }
-          .testimony-user{
-            margin-top: 10%;
-          }
-          
+            }
+
+            .testimony-content h3,
+            .testimony-content p {
+                padding: 10px;
+            }
+
+            .testimony-user {
+                margin-top: 10%;
+            }
+
         }
     </style>
 </head>
+
 <body>
     <div id="app-wrapper">
         <div id="app">
             <section id="header">
-                 <div>
+                <div>
                     <img src="assets/images/logo.png">
-                 </div>
-                 <ul>
-                    <li><a href="mailto:official.ojingirisamuel@gmail.com"><i class="fa fa-envelope"></i> <span class="no-mobile">official.ojingirisamuel@gmail.com</span></a></li>
-                    <li><a href="tel:+2348030914844"><i class="fa fa-phone"></i> <span class="no-mobile">+234 803 091 4844</span></a></li>
-                 </ul> 
+                </div>
+                <ul>
+                    <li><a href="mailto:official.ojingirisamuel@gmail.com"><i class="fa fa-envelope"></i> <span
+                                class="no-mobile">official.ojingirisamuel@gmail.com</span></a></li>
+                    <li><a href="tel:+2348030914844"><i class="fa fa-phone"></i> <span class="no-mobile">+234 803 091
+                                4844</span></a></li>
+                </ul>
             </section>
             <div id="banner-pusher"></div>
             <section id="banner">
                 <div id="overlay"></div>
-                 <h1>
+                <h1>
                     Every Business
                     Deserves a
                     Branding!
-                 </h1>
-                 <div id="green"></div>
+                </h1>
+                <div id="green"></div>
                 <div id="yellow"></div>
                 <div id="blue"></div>
                 <div id="red"></div>
@@ -589,32 +685,35 @@
 
                 </div>
                 <div id="hero-image-pan2">
-                
+
                 </div>
             </section>
             <section id="our-service">
                 <div class="section-heading">
                     <h2>Our Creative Services</h2>
-                    <p>Discover our range of services designed to help your business stand out and thrive in a competitive market.</p>
+                    <p>Discover our range of services designed to help your business stand out and thrive in a
+                        competitive market.</p>
                 </div>
                 <div id="service-lister">
                     <div class="service">
-                       <div class="service-icon" data="assets/images/logo-brand.png"></div>
-                       <div>
+                        <div class="service-icon" data="assets/images/logo-brand.png"></div>
+                        <div>
                             <h3>Logo Design</h3>
                             <p>Crafting memorable logos that define your brand</p>
-                            <span>Your logo is the face of your business, and we ensure it’s unforgettable. Our designs are unique, professional,
+                            <span>Your logo is the face of your business, and we ensure it’s unforgettable. Our designs
+                                are unique, professional,
                                 and
                                 aligned with your brand’s values to leave a lasting impression.</span>
-                       </div>
+                        </div>
                     </div>
-                     <div class="service">
+                    <div class="service">
                         <div class="service-icon" data="assets/images/branding1 (3).jpg"></div>
                         <div>
                             <h3>Brand Identity</h3>
                             <p>Building a cohesive and powerful brand story.</p>
-                            <span>From colors and typography to voice and tone, we create a complete branding system that resonates with your target
-                            audience and positions you as a leader in your industry.</span>
+                            <span>From colors and typography to voice and tone, we create a complete branding system
+                                that resonates with your target
+                                audience and positions you as a leader in your industry.</span>
                         </div>
                     </div>
                     <div class="service">
@@ -622,8 +721,10 @@
                         <div>
                             <h3>Web Design</h3>
                             <p>Engaging websites that drive results.</p>
-                            <span>We design and develop modern, responsive websites that not only look stunning but also provide seamless user
-                            experiences. Our sites are optimized for performance, usability, and search engines.</span>
+                            <span>We design and develop modern, responsive websites that not only look stunning but also
+                                provide seamless user
+                                experiences. Our sites are optimized for performance, usability, and search
+                                engines.</span>
                         </div>
                     </div>
                     <div class="service">
@@ -631,8 +732,9 @@
                         <div>
                             <h3>Marketing Collateral</h3>
                             <p>Professional materials that boost your outreach.</p>
-                            <span>Enhance your marketing campaigns with well-designed business cards, brochures, flyers, and digital assets. We ensure
-                            your message is delivered with clarity and style.</span>
+                            <span>Enhance your marketing campaigns with well-designed business cards, brochures, flyers,
+                                and digital assets. We ensure
+                                your message is delivered with clarity and style.</span>
                         </div>
                     </div>
                     <div class="service">
@@ -640,8 +742,9 @@
                         <div>
                             <h3>Social Media Branding</h3>
                             <p>Consistent branding across all platforms.</p>
-                            <span>We help you create a visually appealing and cohesive presence on social media, from profile designs to custom graphics
-                            for posts and stories.</span>
+                            <span>We help you create a visually appealing and cohesive presence on social media, from
+                                profile designs to custom graphics
+                                for posts and stories.</span>
                         </div>
                     </div>
                     <div class="service">
@@ -649,8 +752,9 @@
                         <div>
                             <h3>Packaging Design</h3>
                             <p>Packaging that stands out on the shelves.</p>
-                            <span>We design product packaging that’s not just beautiful but also functional and aligned with your brand’s identity,
-                            helping you attract and retain customers.</span>
+                            <span>We design product packaging that’s not just beautiful but also functional and aligned
+                                with your brand’s identity,
+                                helping you attract and retain customers.</span>
                         </div>
                     </div>
                     <div class="service">
@@ -658,8 +762,9 @@
                         <div>
                             <h3>Content Creation & Copywriting</h3>
                             <p>Words and visuals that connect with your audience.</p>
-                            <span>Whether it’s engaging copy for your website or graphics for your campaigns, we provide content that tells your story
-                            effectively.</span>
+                            <span>Whether it’s engaging copy for your website or graphics for your campaigns, we provide
+                                content that tells your story
+                                effectively.</span>
                         </div>
                     </div>
                     <div class="service">
@@ -667,10 +772,11 @@
                         <div>
                             <h3>Consultation Services</h3>
                             <p>Strategic Insights to Shape Your Brand's Future.</p>
-                            <span>Not sure what your brand needs? We’ll analyze your business and recommend strategies to elevate your presence</span>
+                            <span>Not sure what your brand needs? We’ll analyze your business and recommend strategies
+                                to elevate your presence</span>
                         </div>
                     </div>
-                    
+
                 </div>
             </section>
             <section id="what-client-are-saying">
@@ -682,8 +788,10 @@
                     <div class="testimony-single">
                         <div class="testimony-user" data="assets/images/t1.jpeg"></div>
                         <div class="testimony-content">
-                            <h3>"Working with Ojiiis was a game-changer for our business. They captured the essence of our identity and
-                                transformed it into a visual story that truly resonates with our audience. The results exceeded our
+                            <h3>"Working with Ojiiis was a game-changer for our business. They captured the essence of
+                                our identity and
+                                transformed it into a visual story that truly resonates with our audience. The results
+                                exceeded our
                                 expectations!"</h3>
                             <p>— Jessica R., CEO, Creative Ventures</p>
                         </div>
@@ -691,16 +799,19 @@
                     <div class="testimony-single">
                         <div class="testimony-user" data="assets/images/t2.jpeg"></div>
                         <div class="testimony-content">
-                            <h3>"The branding solutions provided by Ojiiis are unparalleled. From strategy to execution, every step was
-                                seamless and professional. Our brand now stands out in a crowded market, and we couldn't be happier."
+                            <h3>"The branding solutions provided by Ojiiis are unparalleled. From strategy to execution,
+                                every step was
+                                seamless and professional. Our brand now stands out in a crowded market, and we couldn't
+                                be happier."
                             </h3>
                             <p>— Michael T., Founder, NextGen Startups</p>
                         </div>
                     </div>
                     <div class="testimony-single">
-                    <div class="testimony-user" data="assets/images/t3.jpeg"></div>
+                        <div class="testimony-user" data="assets/images/t3.jpeg"></div>
                         <div class="testimony-content">
-                            <h3>"Ojiiis not only revamped our branding but also gave us the confidence to showcase our business on a
+                            <h3>"Ojiiis not only revamped our branding but also gave us the confidence to showcase our
+                                business on a
                                 global
                                 stage. Their creativity and attention to detail are unmatched. Highly recommend!"</h3>
                             <p>— Emily K., Marketing Director, Horizon Group</p>
@@ -716,44 +827,47 @@
                 <div id="contact-us-">
                     <div id="contact-us-left">
                         <div><i class="fa fa-twitter"></i> <a href="https://x.com/ojiiis_ng">x.com/ojiiis_ng</a></div>
-                        <div><i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/company/ojiiis/">linkedin.com/company/ojiiis</a></div>
-                        <div><i class="fa fa-envelope"></i> <a href="mailto:official.ojingirisamuel@gmail.com">official.ojingirisamuel@gmail.com</a> </div>
+                        <div><i class="fa fa-linkedin"></i> <a
+                                href="https://www.linkedin.com/company/ojiiis/">linkedin.com/company/ojiiis</a></div>
+                        <div><i class="fa fa-envelope"></i> <a
+                                href="mailto:official.ojingirisamuel@gmail.com">official.ojingirisamuel@gmail.com</a>
+                        </div>
                         <div><i class="fa fa-phone"></i> <a href="tel:+2348030914844">+234 803 091 4844</a> </div>
                     </div>
                     <div id="contact-us-right">
 
-                         <form>
-                             <input type="text" name="fullname" placeholder="Enter your fullname">
-                             <input type="text" name="contact" placeholder="Enter your contact details">
-                             <textarea name="message" placeholder="Enter your message"></textarea>
-                             <button>Send</button>
-                         </form>
+                        <form>
+                            <input type="text" name="fullname" placeholder="Enter your fullname">
+                            <input type="text" name="contact" placeholder="Enter your contact details">
+                            <textarea name="message" placeholder="Enter your message"></textarea>
+                            <button>Send</button>
+                        </form>
                     </div>
                 </div>
             </section>
             <section id="footer">
-                   <img src="assets/images/logo-white.png">
-                   <h6>Every business deserves a branding.</h6>
-                 
+                <img src="assets/images/logo-white.png">
+
             </section>
         </div>
     </div>
 
     <script>
-       var si =  document.getElementsByClassName('service-icon'), tu = document.getElementsByClassName('testimony-user');;
-       for(let i =0 ; i < si.length ; i++){
-        console.log(si[i].getAttribute('data'))
-        si[i].style.backgroundImage = `url('${si[i].getAttribute('data')}')`;
-       }
+        var si = document.getElementsByClassName('service-icon'), tu = document.getElementsByClassName('testimony-user');;
+        for (let i = 0; i < si.length; i++) {
+            console.log(si[i].getAttribute('data'))
+            si[i].style.backgroundImage = `url('${si[i].getAttribute('data')}')`;
+        }
         for (let i = 0; i < tu.length; i++) {
-                console.log(tu[i].getAttribute('data'))
-                tu[i].style.backgroundImage = `url('${tu[i].getAttribute('data')}')`;
-            }
-       document.getElementById("show-app").onclick = ()=>{
-         document.getElementById("hero").scrollIntoView();
-       }
+            console.log(tu[i].getAttribute('data'))
+            tu[i].style.backgroundImage = `url('${tu[i].getAttribute('data')}')`;
+        }
+        document.getElementById("show-app").onclick = () => {
+            document.getElementById("hero").scrollIntoView();
+        }
 
-       
+
     </script>
 </body>
+
 </html>
