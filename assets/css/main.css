@@ -656,8 +656,8 @@
             }
 
             #contact-us-left div {
-                font-size: 20px;
-                margin-bottom: 25px;
+                font-size: 15px;
+                margin-bottom: 15px;
             }
 
             #contact-us-right {
@@ -669,8 +669,8 @@
                 padding: 10px;
             }
 
-            .testimony-user {
-                margin-top: 10%;
-            }
+                                  .testimony-user {
+                                      top: -28%;
+                                    }
 
         }
