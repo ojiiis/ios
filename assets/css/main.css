@@ -274,7 +274,10 @@
             position: absolute;
                 width: 45%;
                 height: 80%;
+                border: 6px solid #fff;
+                border-radius: 10px;
         }
+      
         #hero-image-pan1 {
                     
                     rotate: -40deg;
