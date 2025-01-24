@@ -3,7 +3,9 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+             background: black;
+            background-image: url('../../assets/images/banner.png');
+            background-repeat: no-repeat;
         }
 
         a {
@@ -11,12 +13,14 @@
             color: #fff;
         }
 
-        #app-wrapper,
-        #app {}
-
+        #app-wrapper{
+            width: 100%;
+        }
+     
         #app {
-            position: relative;
-
+        position: relative;
+        max-width: 1500px;
+        margin: 0 auto;
         }
 
         #header {
@@ -29,6 +33,7 @@
             position: fixed;
             width: 100%;
             top: 0;
+            left:0;
         }
 
         #header div {
@@ -96,20 +101,20 @@
 
         @keyframes green {
             0% {
-                width: 250px;
-                height: 250px;
+                width: 150px;
+                height: 150px;
                 rotate: 0deg;
             }
 
             50% {
-                width: 200px;
-                height: 200px;
+                width: 100px;
+                height: 100px;
                 rotate: 45deg;
             }
 
             100% {
-                width: 250px;
-                height: 250px;
+                width: 150px;
+                height: 150px;
                 rotate: 0deg;
             }
         }
@@ -130,20 +135,20 @@
      
         @keyframes yellow {
             0% {
-                width: 250px;
-                height: 250px;
+                width: 150px;
+                height: 150px;
                 rotate: 0deg;
             }
 
             50% {
-                width: 200px;
-                height: 200px;
+                width: 100px;
+                height: 100px;
                 rotate: 45deg;
             }
 
             100% {
-                width: 250px;
-                height: 250px;
+                width: 150px;
+                height: 150px;
                 rotate: 0deg;
             }
         }
@@ -163,36 +168,36 @@
                                             
         @keyframes blue {
             0% {
-                width: 250px;
-                height: 250px;
+                width: 100px;
+                height: 100px;
                 rotate: 0deg;
             }
 
             50% {
-                width: 350px;
-                height: 350px;
+                width: 150px;
+                height: 150px;
                 rotate: -45deg;
                 right: 10vw;
                 top: 30vh;
             }
 
             100% {
-                width: 250px;
-                height: 250px;
+                width: 100px;
+                height: 100px;
                 rotate: 0deg;
             }
         }
 
         #red {
             width: 500px;
-            height: 250px;
+            height: 100px;
             background: url('../../assets/images/red.png');
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
             position: absolute;
             right: 1vw;
-            top: 70vh;
+            top: 60vh;
             animation: red 2s infinite;
         }
 
@@ -209,7 +214,12 @@
                 right: 1vw;
             }
         }
-
+#red,
+#yellow,
+#green,
+#blue {
+    z-index: -1;
+}
         #show-app {
             position: absolute;
             bottom: 30px;
@@ -256,7 +266,10 @@
         color: #ff0000;
         }
 
-
+ #hero .section-heading h2 {
+        width: 65%;
+        z-index: 100;
+ }
         #hero-image-placer{
             position: absolute;
             top:50%;
@@ -264,6 +277,7 @@
             height: 80%;
                 width: 35%;
                 transform: translate(0,-50%);
+                
         }
         #hero-image-pan-holder{
          position: relative; 
@@ -362,6 +376,7 @@
         .service div:last-child {
             padding-left: 10px;
             padding: 10px;
+            width: 65%;
         }
 
         .service div:last-child h3 {
@@ -615,7 +630,7 @@
     right: 50px;
     top: 100px;
     animation: green-mobile 2s infinite;
-    z-index: -1;
+
 }
 #yellow{
 width: 20px;
@@ -623,7 +638,7 @@ width: 20px;
     right: 100px;
         top: 160px;
 animation: yellow-mobile 2s infinite;
-z-index: -1;
+
 }
 #blue{
 width: 20px;
@@ -631,16 +646,17 @@ height: 20px;
 right:20px;
 top:160px;
 animation: blue-mobile 2s infinite;
-z-index: -1;
+
 }
 #red{
     width: 100px;
-        height: 50px;
+    height: 50px;
 right: 50px;
 top: 300px;
 animation: red-mobile 2s infinite;
-z-index: -1;
-}         
+
+}     
+  
 #show-app{
     display: none;
 }
@@ -727,7 +743,9 @@ z-index: -1;
             /* currently working here*/
             .service div:last-child {
                 margin: 0 auto;
-                padding: 10px;
+                padding-left: 0;
+                width: auto;
+                padding: 20px;
                 text-wrap: wrap;
                 text-align: left;
             }
@@ -751,7 +769,7 @@ z-index: -1;
             #contact-us {
                 /* // background-image: none; */
             }
-
+      
             #contact-us- {
                 flex-direction: column;
                 justify-content: space-evenly;

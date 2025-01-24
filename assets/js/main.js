@@ -3,7 +3,7 @@
             si[i].style.backgroundImage = `url('${si[i].getAttribute('data')}')`;
         }
         for (let i = 0; i < tu.length; i++) {
-            console.log(tu[i].getAttribute('data'))
+           
             tu[i].style.backgroundImage = `url('${tu[i].getAttribute('data')}')`;
         }
         document.getElementById("show-app").onclick = () => {
