@@ -800,11 +800,11 @@ animation: red-mobile 2s infinite;
 }
  #hero .section-heading h2 {
      width: 100%;
-     font-size: 50px;
+     font-size: 45px;
  }
 #hero-image-pan-holder {
     position: relative;
-    width: 100%;
+    width: 90%;
     height: 100%;
 }
 
