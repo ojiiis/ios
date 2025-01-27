@@ -14,15 +14,23 @@
         }
 
         #app-wrapper{
-            width: 100%;
+           
         }
-     
+      .no-desktop{
+        display: none;
+      }
         #app {
         position: relative;
-        max-width: 1500px;
-        margin: 0 auto;
+     
         }
-
+  .section-inner {
+      max-width: 1500px;
+      margin: 0 auto;
+      position: relative;
+  }
+  .section-inner-full{
+    max-width: auto;
+  }
         #header {
             height: 70px;
             background: #000;
@@ -66,20 +74,35 @@
             height: 100vh;
             position: absolute;
             top: 0;
-            z-index: -1;
+            left: 0;
+            z-index: 1;
             background: url('../../assets/images/banner.png');
             background-attachment: fixed;
+            display: flex;
+            justify-content: center;
         }
-
-        #overlay {
+ #banner::before {
+  content:"";
+    width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: black;
+        z-index: -1;
+        opacity: .85;
+ }
+        /* #overlay {
             width: 100%;
             height: 100%;
             position: absolute;
             top: 0;
+            left:0;
             background: black;
-            z-index: -3;
+            z-index: -1;
             opacity: .85;
-        }
+        } */
+
 
         #banner h1 {
             font-size: 100px;
@@ -220,13 +243,14 @@
 #blue {
     z-index: -1;
 }
+
         #show-app {
             position: absolute;
             bottom: 30px;
             left: 50%;
             height: 40px;
             cursor: pointer;
-
+            z-index:999999999999999999999999999999999999999 ;
         }
 
         #show-app i {
@@ -311,7 +335,36 @@
                         top:10%;
                         right:0;
                   }
-        #our-service,
+ #about-us{
+background: #fff;
+    background-image: url('../../assets/images/service-filler.png');
+        background-repeat: no-repeat;
+        background-position: top left;
+position: relative;
+ }
+  #about-us::before{
+    content:"";
+position: absolute;
+width:100%;
+height: 100%;
+top:0;
+left:0;
+opacity: 0.8;
+  }
+        #about-us .section-inner .section-heading h2{
+          
+            color: #000;
+        }
+        #about-us-content{
+          display: flex;
+          color:#000;
+          font-size: 20px;
+          padding: 20px;
+          background: #fff;
+          border-radius: 20px;
+        }
+            
+       #about-us, #our-service,
         #what-client-are-saying,
         #contact-us {
             padding: 50px;
@@ -336,9 +389,6 @@
 
         #our-service {
             background: #00af01;
-            background-image: url('../../assets/images/service-filler.png');
-            background-repeat: no-repeat;
-            background-position: top left;
         }
 
         #service-lister {
@@ -530,6 +580,67 @@
             color: #fff;
         }
 
+
+
+
+                                @media screen and (max-width:1300px) {
+                                    #banner h1 {
+                                        font-size: 100px;
+                                        color: #fff;
+                                        margin-top: 35vh;
+                                        text-align: center;
+                                        width: 60vw;
+                                    }
+                
+                                    #hero .section-heading h2 {
+                                        width: 50%;
+                                        z-index: 100;
+                                        font-size: 90px;
+                                    }
+                
+                                }
+                
+                                @media screen and (max-width:1150px) {
+                                    #hero {
+                                        display: flex;
+                                        flex-direction: column;
+                                        height: auto;
+                
+                                    }
+                
+                                    #hero .section-heading h2 {
+                                        width: 100%;
+                                    }
+                
+                                    #hero-image-placer {
+                                        position: relative;
+                                        top: 0;
+                                        right: 0;
+                                        left: 0;
+                                        height: 400px;
+                                        width: 90%;
+                                        transform: none;
+                                        margin: 0 auto;
+                                        margin-top: 70px;
+                                        margin-bottom: 70px;
+                                    }
+                
+                                    #hero-image-pan-holder {
+                                        position: relative;
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                
+                                    #hero-image-pan1,
+                                    #hero-image-pan2 {
+                                        position: absolute;
+                                        width: 45%;
+                                        height: 80%;
+                                    }
+                                }
+
+
+
         @media screen and (max-width:720px) {
             .no-mobile {
                 display: none;
@@ -687,7 +798,10 @@ animation: red-mobile 2s infinite;
     margin: 0 auto;
     margin-top: 20px;
 }
-
+ #hero .section-heading h2 {
+     width: 100%;
+     font-size: 50px;
+ }
 #hero-image-pan-holder {
     position: relative;
     width: 100%;
@@ -809,5 +923,28 @@ animation: red-mobile 2s infinite;
                                   .testimony-user {
                                       top: -26%;
                                     }
+.no-desktop {
+    display: block;
+}
+ #header ul#d-nav{
+    display: none;
+    position: fixed;
+    top:54px;
+    left:0;
+    width: 100%;
+    height: auto;
+    background: #000;
+    z-index: 1000;
+    /* display: flex; */
+    flex-direction: column;
+}
+ #header ul#d-nav li{
+margin-top:10px;
+margin-bottom:15px;
+font-size: 20px;
+ }
 
         }
+
+    
+
